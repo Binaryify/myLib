@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>移动端轮播图</title>
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1, user-scalable=no"/>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+<style>
+/* CSS Document */
+/*css 重置样式*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{ margin:0; padding:0}
+h1,h2,h3,h4,h5,h6 { font-weight:normal}
+ol,ul {list-style:none;}
+li { list-style:none}
+a { text-decoration:none; display:block; color:#FFF}
+img { border:none; display:block}
+.clearfloat:after{display:block;clear:both;content:"";visibility:hidden;height:0}
+.clearfloat{zoom:1}
+#banner { position:relative;}
+.banner-box { position:relative; height:100%; margin:0 auto; overflow:hidden}
+.banner-show { position:absolute; width:100%; min-height:160px; left:0}
+.banner-show li { position:relative; float:left;}
+.banner-show img { width:100%; height:100%;}
+.banner-tab { width:100%; height:26px; background:rgba(0,0,0,0.5); left:0; bottom:0; position:absolute}
+.banner-tab p { position:absolute; height:13px; line-height:13px; font-size:0.8125rem; top:6px; left:12px; color:#fff}
+.banner-tab ul { position:absolute; height:7px; top:10px; right:5px;}
+.banner-tab li { position:relative; float:left; width:7px; height:7px; background:rgba(255,255,255,0.7); border-radius:3px; margin-right:5px; cursor:pointer}
+.banner-tab .active { background:#007edf}
+
+</style>
+</head>
+
+<body>
+<div id="banner">
+	<div class="banner-box" id="banner-box">
+    	<ul class="banner-show">
+        	<li data-title="{{item.title}}" v-for="item in listData"><a href=""><img :src="item.src"></a></li>
+        </ul>
+        <div class="banner-tab">
+          <p></p>
+          <ul>
+            <li class="{{$index==0?'active':''}}" v-for="item in listData"></li>
+          </ul>
+        </div>
+    </div>
+</div>
+</body>
+<script src="http://www.heibaipig.com/front/js/jquery-1.11.0.min.js" type="text/javascript"></script>
+<script src="http://cdn.bootcss.com/vue/1.0.17/vue.min.js"></script>
+<script type="text/javascript">
+  new Vue({
+      el: "body",
+      data: {
+        listData: [{
+          src: "img/p_00.jpg",
+          title: "title1"
+        }, {
+          src: "img/p_01.jpg",
+          title: "title2"
+        }, {
+          src: "img/p_02.jpg",
+          title: "title3"
+        }, {
+          src: "img/p_03.jpg",
+          title: "title4"
+        }, ]
+      },
+      ready: function() {
+        $('.banner-tab p').html($('.banner-show li').eq(0).attr('data-title'));
+        var iNow = 0,
+          index = 1,
+          nStartX = 0;
+        var oBanner = document.getElementById('banner-box');
+        bannerShow();
+        $(window).resize(function() {
+          bannerShow();
+        });
+
+        oBanner.addEventListener('touchstart', function(event) {
+          event.preventDefault();
+          nStartX = event.targetTouches[0].pageX;
+        }, false);
+
+        oBanner.addEventListener('touchend', function(event) {
+          event.preventDefault();
+          var mw = $('.banner-show li').width(); // 获取可视区域宽度
+          var _l = mw + $('.banner-show').position().left % mw,
+            _w = mw / 2,
+            _m = $('.banner-show li').length - 1;
+          var ml = $('.banner-show').position().left; //这里要重新获取left值
+          if (_l <= _w) { //中点判断
+            ml = ml - _l
+          } else {
+            ml = ml + (mw - _l)
+          }
+          if (ml >= 0) {
+            ml = 0;
+          } else if (ml <= -mw * _m) {
+            ml = -mw * _m;
+          }
+          $('.banner-show').animate({
+            'left': ml
+          }, 200);
+          var _now = parseInt(-ml / mw);
+          $('.banner-tab li').eq(_now).addClass('active').siblings('li').removeClass('active');
+          $('.banner-tab p').html($('.banner-show li').eq(_now).attr('data-title'));
+        }, false);
+
+        oBanner.addEventListener('touchmove', function(event) {
+          event.preventDefault();
+          var touch = event.targetTouches[0];
+          var _l = $('.banner-show').position().left + touch.pageX - nStartX;
+          nStartX = touch.pageX;
+          $('.banner-show').css('left', _l);
+        }, false);
+      }
+    })
+  //自动切换
+  function tabBanner(n) {
+    $('.banner-show').animate({
+      'left': -n * $(window).width()
+    });
+    $('.banner-tab li').eq(n).addClass('active').siblings('li').removeClass('active');
+    $('.banner-tab p').html($('.banner-tab li').eq(n).attr('data-title'));
+  }
+
+  //自适应
+  function bannerShow() {
+    var _w = $(window).width();
+    var _h = _w * 0.5
+    $('.banner-box').height(_h);
+    $('.banner-show').width(_w * 5);
+    $('.banner-show li').width(_w);
+  };
+</script></html>
