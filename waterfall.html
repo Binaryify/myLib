@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <style>
+    #main {
+      -webkit-column-width: 160px;
+      -webkit-column-gap: 5px;
+      column-width: 160px;
+      column-gap: 5px;
+    }
+    /*数据块 砖块*/
+
+    #main .items {
+      /*width: 160px;*/
+      margin: 4px 0;
+      width: 100%;
+      /*overflow: hidden;*/
+    }
+
+    #main img {
+      width: 100%;
+      /*-webkit-filter: blur(2px);
+         /*filter: blur(2px);*/
+    }
+
+    #main .item_one {
+      position: relative;
+      width: 100%;
+    }
+
+    #main .item_two {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 40px;
+      background: rgba(0, 0, 0, .5);
+    }
+
+    #main .itemFont {
+      line-height: 40px;
+      text-align: center;
+      color: white;
+      font-size: 14px;
+    }
+  </style>
+
+
+  <div id="main">
+    <div class="items" v-for="listdata in listdatas">
+      <div class="item_one">
+        <img :src="listdata.src">
+        <div class="item_two">
+          <div class="itemFont">{{listdata.shopName}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<script src="http://cdn.bootcss.com/vue/1.0.17/vue.min.js"></script>
+<script>
+  new Vue({
+    el:"body",
+    data:{
+      listdatas:[
+          {
+            shopName: "waterfall",
+            src:'img/P_00.jpg'
+          },
+          {
+            shopName: "waterfall",
+            src:'img/P_01.jpg'
+          },
+
+          {
+            shopName: "waterfall",
+            src:'img/P_02.jpg'
+          },
+
+          {
+            shopName: "waterfall",
+            src:'img/P_03.jpg'
+          },
+
+          {
+            shopName: "waterfall",
+            src:'img/P_04.jpg'
+          },
+
+          {
+            shopName: "waterfall",
+            src:'img/P_05.jpg'
+          },
+
+          {
+            shopName: "waterfall",
+            src:'img/P_06.jpg'
+          },
+
+          {
+            shopName: "waterfall",
+            src:'img/P_07.jpg'
+          },
+
+          {
+            shopName: "waterfall",
+            src:'img/P_08.jpg'
+          },
+
+          {
+            shopName: "waterfall",
+            src:'img/P_09.jpg'
+          },
+
+          {
+            shopName: "waterfall",
+            src:'img/P_010.jpg'
+          },
+
+          {
+            shopName: "waterfall",
+            src:'img/P_011.jpg'
+          },
+
+          {
+            shopName: "waterfall",
+            src:'img/P_012.jpg'
+          },
+
+          {
+            shopName: "waterfall",
+            src:'img/P_013.jpg'
+          },
+
+          {
+            shopName: "waterfall",
+            src:'img/P_014.jpg'
+          },
+
+          {
+            shopName: "waterfall",
+            src:'img/P_015.jpg'
+          }
+
+
+        ]
+    }
+  })
+</script>
+</body>
+
+</html>
