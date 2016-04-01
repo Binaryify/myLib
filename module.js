@@ -7,7 +7,7 @@
   } else if (typeof exports === 'object') {
     module.exports = factory;
   } else {
-    global.zz = factory(global);
+    global.zzz = factory(global);
   }
 })(this, function(global) {
   'use strict';
