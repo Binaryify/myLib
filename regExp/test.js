@@ -13,7 +13,7 @@ describe('正则表达式测试', function() {
   it('测试用户名"zuzuh",结果应该为true', function() {
     expect(myRegExp.userNameReg.test('zuzuh')).to.be.true;
   });
-  it('测试用户名"zuzuh",结果应该为false', function() {
+  it('测试用户名"!zuzuh",结果应该为false', function() {
     expect(myRegExp.userNameReg.test('!zuzuh')).to.be.false;
   });
   it('测试用户名"zuzuh_",结果应该为false', function() {
