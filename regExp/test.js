@@ -26,5 +26,3 @@ describe('正则表达式测试', function() {
     expect(myRegExp.userNameReg.test('_zuzuh')).to.be.false;
   });
 });
-// console.log(myRegExp.phoneReg.test('13169670619'))
-// console.log(myRegExp.userNameReg.test('zhuanhf'))
