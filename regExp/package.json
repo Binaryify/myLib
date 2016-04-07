@@ -1,0 +1,15 @@
+{
+  "name": "regExp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "regExp.js",
+  "scripts": {
+    "test": "mocha test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^3.5.0"
+  }
+}
