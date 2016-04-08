@@ -25,4 +25,13 @@ describe('正则表达式测试', function() {
   it('测试用户名"_zuzuh",结果应该为false', function() {
     expect(myRegExp.userNameReg.test('_zuzuh')).to.be.false;
   });
+  it('邮箱"xx.qq.com",结果应该为false', function() {
+    expect(myRegExp.emailReg.test('xx.qq.com')).to.be.false;
+  });
+  it('邮箱"xx@qq.com",结果应该为true', function() {
+    expect(myRegExp.emailReg.test('xx@qq.com')).to.be.true;
+  });
+  it('邮箱"1821000000@qq.com",结果应该为true', function() {
+    expect(myRegExp.emailReg.test('1821000000@qq.com')).to.be.true;
+  });
 });
