@@ -34,4 +34,7 @@ describe('正则表达式测试', function() {
   it('邮箱"1821000000@qq.com",结果应该为true', function() {
     expect(myRegExp.emailReg.test('1821000000@qq.com')).to.be.true;
   });
+  it('测试URL:"/tab1?code=001085067272c6157e7ef037cb82a41E&state=STATE&code=001085067272c6157e7ef037cb82a41E&state=STATE",结果应该为"/tab1"', function() {
+    expect(myRegExp.tabReg.exec('/tab1?code=001085067272c6157e7ef037cb82a41E&state=STATE&code=001085067272c6157e7ef037cb82a41E&state=STATE')[0]).to.equal('/tab1')
+  });
 });

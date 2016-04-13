@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mochawesome Report Card</title>
+    
+    <link rel="stylesheet" href="css/mochawesome.css">
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="report-info-cnt">
+          <h1 class="report-title">regExp</h1>
+          <h3 class="report-date">Sunday, April 10 2016, 10:50am</h3>
+        </div>
+        <div class="quick-summary-cnt">
+            <ul class="list-unstyled quick-summary">
+              <li class="qs-item summary-duration" title="Duration">45<span>MS</span></li>
+              <li class="qs-item summary-suites" title="Suites">1</li>
+              <li class="qs-item summary-tests" title="Tests">11</li>
+              <li class="qs-item summary-passes" title="Passed" data-filter="passed">11</li>
+              <li class="qs-item summary-failures" title="Failed" data-filter="failed">0</li>
+              <li class="qs-item summary-pending" title="Pending" data-filter="pending">0</li>
+            </ul>        </div>
+      </div>
+    </div>
+
+    <!-- Report Summary -->
+    <div class="summary">
+      <div class="container">
+          <div class="row">
+            <div class="summary-col summary-duration">
+              <h1 class="summary-count">45<span>MS</span></h1>
+              <h4 class="summary-label">MS</h4>
+            </div>
+            <div class="summary-col summary-suites" title="Suites">
+              <h1 class="summary-count">1</h1>
+              <h4 class="summary-label">Suite</h4>
+            </div>
+            <div class="summary-col summary-tests" title="Tests">
+              <h1 class="summary-count">11</h1>
+              <h4 class="summary-label">Tests</h4>
+            </div>
+            <div class="summary-col summary-passes" data-filter="passed" title="Passed">
+              <h1 class="summary-count">11</h1>
+              <h4 class="summary-label">Passed</h4>
+            </div>
+            <div class="summary-col summary-failures" data-filter="failed" title="Failed">
+              <h1 class="summary-count">0</h1>
+              <h4 class="summary-label">Failed</h4>
+            </div>
+            <div class="summary-col summary-pending" data-filter="pending" title="Pending">
+              <h1 class="summary-count">0</h1>
+              <h4 class="summary-label">Pending</h4>
+            </div>
+          </div>      </div>
+    </div>
+    <div class="statusbar">
+      <div class="container">
+          <div class="row">
+            <div class="status-item status-item-pending-pct">0% Pending</div>
+            <div class="status-item status-item-passing-pct success">100% Passing</div>
+          </div>      </div>
+    </div>
+
+    <!-- Suites -->
+    <div class="details container">
+            <section class="suite-wrap">
+          <div id="7969e24e-64e2-43cc-96b7-c978deb4e646" class="suite has-tests has-passed">
+            <h3 class="suite-title">正则表达式测试</h3>
+            <h5 class="suite-filename">/test.js</h5>
+            <!-- Suite Chart -->
+            <div class="suite-chart-wrap">
+              <canvas id="7969e24e-64e2-43cc-96b7-c978deb4e646" class="suite-chart" width="50" height="50" data-total-passes="11" data-total-failures="0" data-total-pending="0" data-total-skipped="0"></canvas>
+            </div>
+            <div class="suite-data-wrap">
+              <!-- Suite Summary -->
+              <ul class="suite-summary list-unstyled">
+                <li class="suite-summary-item duration">2 ms</li>
+                <li class="suite-summary-item tests">11</li>
+                <li class="suite-summary-item passed">11</li>
+                <li class="suite-summary-item failed">0</li>
+                <li class="suite-summary-item pending">0</li>
+              </ul>
+              <!-- Test Info -->
+              <div class="suite-test-wrap">
+                <div class="suite-test-header" data-toggle="collapse" data-target="#7969e24e-64e2-43cc-96b7-c978deb4e646-test-list">
+                  <h4 class="suite-test-header-title">Tests</h4>
+                </div>
+                <div id="7969e24e-64e2-43cc-96b7-c978deb4e646-test-list" class="list-group test-list collapse in">
+                    <div id="5144882d-5b81-41f3-acfc-23ace8961fac" class="list-group-item test passed">
+          <!-- Test Heading -->
+          <div class="test-heading">
+            <h4 class="test-title">
+              <span class="text-muted hidden"> it </span>
+              测试号码&quot;1316960000x&quot;,结果应该为false
+            </h4>
+            <div class="pull-right">
+              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#5144882d-5b81-41f3-acfc-23ace8961fac > .test-code.collapse">Code</button>
+              <span class="test-duration fast">1 ms</span>
+            </div>
+          </div>
+          <!-- Test Errors -->
+          <!-- Test Code -->
+          <div class="test-code collapse">
+            <pre><code class="hljs javascript small">expect(myRegExp.phoneReg.test(<span class="hljs-string">'1316960000x'</span>)).to.be.false;</code></pre>
+          </div>
+          <!-- Test Error Stack -->
+        </div>            <div id="f3d03187-96b8-4559-9c54-a7116fe6b916" class="list-group-item test passed">
+          <!-- Test Heading -->
+          <div class="test-heading">
+            <h4 class="test-title">
+              <span class="text-muted hidden"> it </span>
+              测试号码&quot;13169600000&quot;,结果应该为true
+            </h4>
+            <div class="pull-right">
+              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#f3d03187-96b8-4559-9c54-a7116fe6b916 > .test-code.collapse">Code</button>
+              <span class="test-duration fast">0 ms</span>
+            </div>
+          </div>
+          <!-- Test Errors -->
+          <!-- Test Code -->
+          <div class="test-code collapse">
+            <pre><code class="hljs javascript small">expect(myRegExp.phoneReg.test(<span class="hljs-string">'13169600000'</span>)).to.be.true;</code></pre>
+          </div>
+          <!-- Test Error Stack -->
+        </div>            <div id="0792ece0-84a4-4e53-a469-5486de8df30e" class="list-group-item test passed">
+          <!-- Test Heading -->
+          <div class="test-heading">
+            <h4 class="test-title">
+              <span class="text-muted hidden"> it </span>
+              测试号码&quot;1316900000&quot;,结果应该为false
+            </h4>
+            <div class="pull-right">
+              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#0792ece0-84a4-4e53-a469-5486de8df30e > .test-code.collapse">Code</button>
+              <span class="test-duration fast">0 ms</span>
+            </div>
+          </div>
+          <!-- Test Errors -->
+          <!-- Test Code -->
+          <div class="test-code collapse">
+            <pre><code class="hljs javascript small">expect(myRegExp.phoneReg.test(<span class="hljs-string">'1316900000'</span>)).to.be.false;</code></pre>
+          </div>
+          <!-- Test Error Stack -->
+        </div>            <div id="bcb4db3f-4c52-4f29-80f5-2fde6aa07bbd" class="list-group-item test passed">
+          <!-- Test Heading -->
+          <div class="test-heading">
+            <h4 class="test-title">
+              <span class="text-muted hidden"> it </span>
+              测试用户名&quot;zuzuh&quot;,结果应该为true
+            </h4>
+            <div class="pull-right">
+              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#bcb4db3f-4c52-4f29-80f5-2fde6aa07bbd > .test-code.collapse">Code</button>
+              <span class="test-duration fast">0 ms</span>
+            </div>
+          </div>
+          <!-- Test Errors -->
+          <!-- Test Code -->
+          <div class="test-code collapse">
+            <pre><code class="hljs javascript small">expect(myRegExp.userNameReg.test(<span class="hljs-string">'zuzuh'</span>)).to.be.true;</code></pre>
+          </div>
+          <!-- Test Error Stack -->
+        </div>            <div id="73380b64-cfb7-4290-88ec-b13c36aed7f2" class="list-group-item test passed">
+          <!-- Test Heading -->
+          <div class="test-heading">
+            <h4 class="test-title">
+              <span class="text-muted hidden"> it </span>
+              测试用户名&quot;!zuzuh&quot;,结果应该为false
+            </h4>
+            <div class="pull-right">
+              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#73380b64-cfb7-4290-88ec-b13c36aed7f2 > .test-code.collapse">Code</button>
+              <span class="test-duration fast">0 ms</span>
+            </div>
+          </div>
+          <!-- Test Errors -->
+          <!-- Test Code -->
+          <div class="test-code collapse">
+            <pre><code class="hljs javascript small">expect(myRegExp.userNameReg.test(<span class="hljs-string">'!zuzuh'</span>)).to.be.false;</code></pre>
+          </div>
+          <!-- Test Error Stack -->
+        </div>            <div id="789336b1-a894-4aba-87cd-dbf80d99c0aa" class="list-group-item test passed">
+          <!-- Test Heading -->
+          <div class="test-heading">
+            <h4 class="test-title">
+              <span class="text-muted hidden"> it </span>
+              测试用户名&quot;zuzuh_&quot;,结果应该为false
+            </h4>
+            <div class="pull-right">
+              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#789336b1-a894-4aba-87cd-dbf80d99c0aa > .test-code.collapse">Code</button>
+              <span class="test-duration fast">0 ms</span>
+            </div>
+          </div>
+          <!-- Test Errors -->
+          <!-- Test Code -->
+          <div class="test-code collapse">
+            <pre><code class="hljs javascript small">expect(myRegExp.userNameReg.test(<span class="hljs-string">'zuzuh_'</span>)).to.be.false;</code></pre>
+          </div>
+          <!-- Test Error Stack -->
+        </div>            <div id="aa80b18d-9190-4f6f-9036-36650db06484" class="list-group-item test passed">
+          <!-- Test Heading -->
+          <div class="test-heading">
+            <h4 class="test-title">
+              <span class="text-muted hidden"> it </span>
+              测试用户名&quot;zu_zuh&quot;,结果应该为true
+            </h4>
+            <div class="pull-right">
+              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#aa80b18d-9190-4f6f-9036-36650db06484 > .test-code.collapse">Code</button>
+              <span class="test-duration fast">0 ms</span>
+            </div>
+          </div>
+          <!-- Test Errors -->
+          <!-- Test Code -->
+          <div class="test-code collapse">
+            <pre><code class="hljs javascript small">expect(myRegExp.userNameReg.test(<span class="hljs-string">'zu_zuh'</span>)).to.be.true;</code></pre>
+          </div>
+          <!-- Test Error Stack -->
+        </div>            <div id="362ab6e7-9649-411d-9977-fd7e5e6e9e29" class="list-group-item test passed">
+          <!-- Test Heading -->
+          <div class="test-heading">
+            <h4 class="test-title">
+              <span class="text-muted hidden"> it </span>
+              测试用户名&quot;_zuzuh&quot;,结果应该为false
+            </h4>
+            <div class="pull-right">
+              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#362ab6e7-9649-411d-9977-fd7e5e6e9e29 > .test-code.collapse">Code</button>
+              <span class="test-duration fast">0 ms</span>
+            </div>
+          </div>
+          <!-- Test Errors -->
+          <!-- Test Code -->
+          <div class="test-code collapse">
+            <pre><code class="hljs javascript small">expect(myRegExp.userNameReg.test(<span class="hljs-string">'_zuzuh'</span>)).to.be.false;</code></pre>
+          </div>
+          <!-- Test Error Stack -->
+        </div>            <div id="2b82abc2-a7fd-41de-b8ec-9a6b69513edf" class="list-group-item test passed">
+          <!-- Test Heading -->
+          <div class="test-heading">
+            <h4 class="test-title">
+              <span class="text-muted hidden"> it </span>
+              邮箱&quot;xx.qq.com&quot;,结果应该为false
+            </h4>
+            <div class="pull-right">
+              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#2b82abc2-a7fd-41de-b8ec-9a6b69513edf > .test-code.collapse">Code</button>
+              <span class="test-duration fast">0 ms</span>
+            </div>
+          </div>
+          <!-- Test Errors -->
+          <!-- Test Code -->
+          <div class="test-code collapse">
+            <pre><code class="hljs javascript small">expect(myRegExp.emailReg.test(<span class="hljs-string">'xx.qq.com'</span>)).to.be.false;</code></pre>
+          </div>
+          <!-- Test Error Stack -->
+        </div>            <div id="a4a03329-da9e-4bb7-89d9-f173322406c7" class="list-group-item test passed">
+          <!-- Test Heading -->
+          <div class="test-heading">
+            <h4 class="test-title">
+              <span class="text-muted hidden"> it </span>
+              邮箱&quot;xx@qq.com&quot;,结果应该为true
+            </h4>
+            <div class="pull-right">
+              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#a4a03329-da9e-4bb7-89d9-f173322406c7 > .test-code.collapse">Code</button>
+              <span class="test-duration fast">0 ms</span>
+            </div>
+          </div>
+          <!-- Test Errors -->
+          <!-- Test Code -->
+          <div class="test-code collapse">
+            <pre><code class="hljs javascript small">expect(myRegExp.emailReg.test(<span class="hljs-string">'xx@qq.com'</span>)).to.be.true;</code></pre>
+          </div>
+          <!-- Test Error Stack -->
+        </div>            <div id="e4838d12-4d78-43d7-ae81-91ae945ae0f4" class="list-group-item test passed">
+          <!-- Test Heading -->
+          <div class="test-heading">
+            <h4 class="test-title">
+              <span class="text-muted hidden"> it </span>
+              邮箱&quot;1821000000@qq.com&quot;,结果应该为true
+            </h4>
+            <div class="pull-right">
+              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#e4838d12-4d78-43d7-ae81-91ae945ae0f4 > .test-code.collapse">Code</button>
+              <span class="test-duration fast">1 ms</span>
+            </div>
+          </div>
+          <!-- Test Errors -->
+          <!-- Test Code -->
+          <div class="test-code collapse">
+            <pre><code class="hljs javascript small">expect(myRegExp.emailReg.test(<span class="hljs-string">'1821000000@qq.com'</span>)).to.be.true;</code></pre>
+          </div>
+          <!-- Test Error Stack -->
+        </div>        </div>
+              </div>
+            </div>
+        
+        
+          </div>
+        </section>
+    </div>
+
+    <footer>
+      <div class="container">
+        <p>Report generated by <a href="http://adamgruber.github.io/mochawesome/" target="_blank">mochawesome</a>.<br>Designed and built by <a href="https://github.com/adamgruber" target="_blank">adamgruber</a>. &copy;2016.</p>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/vendor.js"></script>
+    <script src="js/mochawesome.js"></script>
+  </body>
+</html>
