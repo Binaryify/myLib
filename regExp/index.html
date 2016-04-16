@@ -10,7 +10,11 @@
   console.log(myRegExp.phoneReg.test('13160000000'))
   var str='/tab1?code=001085067272c6157e7ef037cb82a41E&state=STATE&code=001085067272c6157e7ef037cb82a41E&state=STATE'
   console.log(myRegExp.tabReg.exec(str))
-  console.log(str.match(myRegExp.tabReg))
+  console.log(str.match(myRegExp.tabReg)[0])
+  console.log('hahahuhuhaha'.match(myRegExp.test))
+  console.log('<haha>af</haha>'.match(myRegExp.test2))
+  console.log(document.getElementsByTagName('html')[0].innerHTML.match(myRegExp.test2))
+  console.log(myRegExp.test2.exec(document.getElementsByTagName('html')[0].innerHTML))
 
   </script>
 </body>
