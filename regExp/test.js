@@ -61,4 +61,10 @@ describe('正则表达式测试', function() {
   it('测试emoji表情"❌",结果应该为true',function(){
     expect(myRegExp.emojiReg.test('❌')).to.be.true;
   })
+  it('测试emoji表情"👽",结果应该为true',function(){
+    expect(myRegExp.emojiReg.test('👽')).to.be.true;
+  })
+  it('测试emoji表情"👼",结果应该为true',function(){
+    expect(myRegExp.emojiReg.test('👼')).to.be.true;
+  })
 });
