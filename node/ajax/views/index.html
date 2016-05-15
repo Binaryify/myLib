@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function GetData(){
+			var xhr=new XMLHttpRequest();
+			xhr.open('GET','http://localhost:1337/',true);
+			xhr.onreadystatechange=function(){
+				if(xhr.readyState==4){
+					if(xhr.status==200){
+						document.getElementById('div').innerHTML=xhr.responseText;
+					}
+				}
+			}
+			xhr.send(null)
+		}
+	</script>
+	<input type="button" value="获取数据" onclick="GetData()">
+	<div id="div"></div>
+</body>
+</html>

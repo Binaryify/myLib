@@ -1,0 +1,33 @@
+{
+  "name": "GP",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "supervisor app.js"
+  },
+  "dependencies": {
+    "request": "^2.51.0",
+    "colors":"*",
+    "iconv-lite":"*",
+    "bufferhelper":"*",
+    "tunnel-agent":"*",
+    "tough-cookie":"*",
+    "stringstream":"*",
+    "qs":"*",
+    "oauth-sign":"*",
+    "node-uuid":"*",
+    "mime-types":"*",
+    "json-stringify-safe":"*",
+    "isstream":"*",
+    "extend":"*",
+    "http-signature":"*",
+    "hawk":"*",
+    "har-validator":"*",
+    "form-data":"*",
+    "forever-agent":"*",
+    "combined-stream":"*",
+    "caseless":"*",
+    "bl":"*",
+    "aws-sign2":"*"
+  }
+}

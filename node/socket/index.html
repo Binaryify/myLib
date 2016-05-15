@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script src="socket.io/socket.io.js"></script>
+	<link rel="stylesheet" href="style.css">
+	<!-- <script src="socket.io.js"></script> -->
+	<script>
+		var socket=io.connect();
+		socket.on('sendmessage1',function(values){
+			var str='';
+			values.forEach(function(value){
+				str+='<br>'+value;
+			})
+			document.getElementById('result').innerHTML=str;
+		})
+		function add(){
+			socket.emit('sendmessage2',document.getElementById('message').value);
+		}
+	</script>
+	发送消息:
+	<input type="text" id="message" />
+	<input type="button" value="发送" onclick="add()">
+	<output id="result"></output>
+</body>
+</html>
