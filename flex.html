@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box1 {
+            display: flex;
+            justify-content: space-between;
+            ;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .box {
+            display: flex;
+            float: left;
+            width: 200px;
+            height: 200px;
+            background: #000;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 30px;
+        }
+
+        .box span {
+            width: 40px;
+            height: 40px;
+            background: #fff;
+            border-radius: 5px;
+        }
+
+        .box2 {
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .span1 {
+            align-self: center;
+        }
+
+        .box4 {
+            justify-content: space-between;
+        }
+
+        .span2 {
+            align-self: flex-end;
+        }
+
+        .box5 {
+            justify-content: space-between;
+        }
+
+        .span3 {
+            align-self: center;
+        }
+
+        .span4 {
+            align-self: flex-end;
+        }
+
+        .box6 {
+            flex-wrap: wrap;
+            justify-content: space-between;
+            flex-direction: row-reverse;
+        }
+
+        .box6 span,
+        .box8 span,
+        .box9 span {
+            width: 60px;
+            height: 60px;
+        }
+
+        .span5 {
+            align-self: flex-end;
+        }
+
+        .box7 {
+            justify-content: space-between;
+        }
+
+        .box7-inner {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .box8 {
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-content: space-between;
+        }
+
+        .box9 {
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-content: space-between;
+            justify-content: space-between;
+        }
+
+        .box10 {
+            justify-content: space-between;
+        }
+
+        .box10-inner {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+        }
+
+        .span6 {
+            align-self: center;
+        }
+        /*.container{display: flex;float: left;width: 200px;height: 200px;}.cell{flex:0 0 33.33%;background: red;}.fixed{width: 50%;background: blue;flex:1;}*/
+        /*圣杯布局1*/
+
+        .container {
+            position: relative;
+            clear: both;
+            margin: 0 0 30px 0;
+        }
+
+        .center {
+            margin: 0 200px;
+            min-width: 200px;
+            background: red;
+            height: 200px;
+        }
+
+        .left,
+        .right {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            top: 0;
+        }
+
+        .left {
+            background: blue;
+        }
+
+        .right {
+            right: 0;
+            background: green;
+        }
+        /*圣杯布局2*/
+
+        .container1 {
+            padding: 0 200px;
+            margin-bottom: 200px;
+            height: 200px;
+        }
+
+        .center1 {
+            float: left;
+            width: 100%;
+            background: red;
+            height: 200px;
+            min-width: 200px;
+        }
+
+        .left1 {
+            float: left;
+            width: 200px;
+            height: 200px;
+            background: blue;
+            margin-left: -100%;
+            position: relative;
+            left: -200px;
+        }
+
+        .right1 {
+            float: right;
+            width: 200px;
+            height: 200px;
+            background: green;
+            margin-right: -200px;
+        }
+        /*圣杯布局3*/
+
+        .flex-box {
+            display: flex;
+            height: 200px;
+            margin-top: 100px;
+        }
+
+        .left2,
+        .right2 {
+            flex: 0 0 200px;
+        }
+
+        .left2 {
+            order: -1;
+            background: blue;
+        }
+
+        .center2 {
+            background: red;
+            flex: 1;
+        }
+
+        .right2 {
+            background: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1 box"><span></span><span></span></div>
+    <div class="box2 box"><span></span><span></span></div>
+    <div class="box3 box"><span></span><span class="span1"></span></div>
+    <div class="box4 box"><span></span><span class="span2"></span></div>
+    <div class="box5 box"><span></span><span class='span3'></span><span class="span4"></span></div>
+    <div class="box6 box"><span></span><span></span><span></span><span class="span5"></span></div>
+    <div class="box7 box">
+        <div class="box7-inner"><span></span><span></span></div>
+        <div class="box7-inner"><span></span><span></span></div>
+    </div>
+    <div class="box8 box"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+    <div class="box8 box"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+    <div class="box9 box"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+    <div class="box10 box clearfix">
+        <div class="box10-inner"><span></span><span></span></div><span class="span6"></span>
+        <div class="box10-inner"><span></span><span></span></div>
+    </div>
+    <div class="container">
+        <div class="center"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
+    <div class="container1">
+        <div class="center1"></div>
+        <div class="left1"></div>
+        <div class="right1"></div>
+    </div>
+    <div class="flex-box">
+        <div class="center2"></div>
+        <div class="left2"></div>
+        <div class="right2"></div>
+    </div>
+    <script type="text/javascript"></script>
+</body>
+
+</html>
